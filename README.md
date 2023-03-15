@@ -9,3 +9,4 @@ Funkcjonalności:
 5. Sortowanie listy (alfabetycznie, wiekowo)
 6. Logowanie na platforme
 7. Pobieranie listy do .pdf
+8. Rejestracja
