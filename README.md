@@ -10,3 +10,4 @@ Funkcjonalności:
 6. Logowanie na platforme
 7. Pobieranie listy do .pdf
 8. Rejestracja
+9. Dodawanie kontaktów do ulubionych
