@@ -1,4 +1,4 @@
-#Projekt na inżynierie oprogramowanie
+# Projekt na inżynierie oprogramowanie
 Cel: Stworzenie menedżera do zarządzania kontaktami
 
 Funkcjonalności:
