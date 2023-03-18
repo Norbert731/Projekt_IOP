@@ -1,0 +1,6 @@
+# list of files from setup: 
+# dotnet new webapp -o Project_IOP --no-https -f net7.0
+
+
+
+!.gitignore
