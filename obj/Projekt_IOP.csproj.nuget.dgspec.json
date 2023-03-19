@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\orzel\\source\\repos\\Projekt_IOP\\Projekt_IOP.csproj": {}
+    "C:\\Users\\orzel\\source\\repos\\Projekt_IOP\\Projekt_IOP.csproj": {}
   },
   "projects": {
-    "c:\\Users\\orzel\\source\\repos\\Projekt_IOP\\Projekt_IOP.csproj": {
+    "C:\\Users\\orzel\\source\\repos\\Projekt_IOP\\Projekt_IOP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\orzel\\source\\repos\\Projekt_IOP\\Projekt_IOP.csproj",
+        "projectUniqueName": "C:\\Users\\orzel\\source\\repos\\Projekt_IOP\\Projekt_IOP.csproj",
         "projectName": "Projekt_IOP",
-        "projectPath": "c:\\Users\\orzel\\source\\repos\\Projekt_IOP\\Projekt_IOP.csproj",
+        "projectPath": "C:\\Users\\orzel\\source\\repos\\Projekt_IOP\\Projekt_IOP.csproj",
         "packagesPath": "C:\\Users\\orzel\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\orzel\\source\\repos\\Projekt_IOP\\obj\\",
+        "outputPath": "C:\\Users\\orzel\\source\\repos\\Projekt_IOP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\orzel\\AppData\\Roaming\\NuGet\\NuGet.Config",
