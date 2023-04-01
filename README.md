@@ -18,7 +18,3 @@ Funkcjonalności:
 Na wszelki wypadek napiszę tutaj wersje jakich używam żebyśmy mieli te same
 - Visual studio Code 2022, wersja 17.5.2
 - SDK 7.0.202 (można sprawdzić wpisując w termial "dotnet --list-sdks")
-
-Komenda do stworznia aplikacji webowej:
-
-dotnet new webapp -o Projekt_IOP --no-https -f net7.0
