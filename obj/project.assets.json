@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\orzel\\.nuget\\packages\\": {}
+    "C:\\Users\\NORBERT\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\orzel\\source\\repos\\Projekt_IOP\\Projekt_IOP.csproj",
+      "projectUniqueName": "D:\\POBRANE\\MojeProjektyStronInterentowych\\Projekt_IOP\\Projekt_IOP\\Projekt_IOP.csproj",
       "projectName": "Projekt_IOP",
-      "projectPath": "C:\\Users\\orzel\\source\\repos\\Projekt_IOP\\Projekt_IOP.csproj",
-      "packagesPath": "C:\\Users\\orzel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\orzel\\source\\repos\\Projekt_IOP\\obj\\",
+      "projectPath": "D:\\POBRANE\\MojeProjektyStronInterentowych\\Projekt_IOP\\Projekt_IOP\\Projekt_IOP.csproj",
+      "packagesPath": "C:\\Users\\NORBERT\\.nuget\\packages\\",
+      "outputPath": "D:\\POBRANE\\MojeProjektyStronInterentowych\\Projekt_IOP\\Projekt_IOP\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\orzel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\NORBERT\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
