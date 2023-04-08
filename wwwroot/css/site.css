@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
 *{
     box-sizing: border-box;
 }
@@ -5,28 +7,41 @@
 html {
     position: relative;
     min-height: 100%;
-    font-size: 14px;
 }
-
 
 body {
-    margin-bottom: 60px;
-}
-
-
-.content-container{
+    background-image: linear-gradient(#37087E,#160332);
+    color: #fff;
+    font-family: "Roboto", sans-serif;
     max-width: 1920px;
+    margin-bottom: 60px;
+    margin: 0 auto;
 }
 
-
+.container{
+    max-width: 1674px;
+}
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* Navbar Header */
+
+.navbar-custom {
+    background-color: #3B099D !important;
+    border-radius: 0 0 20px 20px;
+    border-bottom: #FFFFFF solid 1px;
+}
+
+/* List content */
+
+.list-bg{
+    border-radius: 20px;
 }
 
 
 /* Media queries */
-
 @media (min-width: 768px) {
     html {
         font-size: 16px;
