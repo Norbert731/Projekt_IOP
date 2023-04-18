@@ -1,0 +1,4 @@
+Plik wyeksportowany za pomocą sql server, metodą export data-tier application. Plik stworzony za pomocą sql express
+
+
+Używając sql serwer jak wejdzie się na localhosta to mozna klikąć prawym na folder Databases i tam wybra import data-tier appliaction i wybrać ten plik powinna wszystko potem działać dobrze
