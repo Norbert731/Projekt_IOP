@@ -1,11 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Pages",
-    "\\Pages\\Shared",
+    "\\dummy_data",
     "\\wwwroot",
-    "\\wwwroot\\css"
+    "\\wwwroot\\css",
+    "\\wwwroot\\js"
   ],
-  "SelectedNode": "\\wwwroot\\css\\site.css",
   "PreviewInSolutionExplorer": false
 }

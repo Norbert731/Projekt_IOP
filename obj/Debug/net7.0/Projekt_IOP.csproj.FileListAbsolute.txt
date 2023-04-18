@@ -61,3 +61,10 @@ D:\POBRANE\MojeProjektyStronInterentowych\Projekt_IOP\Projekt_IOP\obj\Debug\net7
 D:\POBRANE\MojeProjektyStronInterentowych\Projekt_IOP\Projekt_IOP\obj\Debug\net7.0\Projekt_IOP.genruntimeconfig.cache
 D:\POBRANE\MojeProjektyStronInterentowych\Projekt_IOP\Projekt_IOP\obj\Debug\net7.0\ref\Projekt_IOP.dll
 D:\POBRANE\MojeProjektyStronInterentowych\Projekt_IOP\Projekt_IOP\bin\Debug\net7.0\dummy_data\dummy_data.json
+D:\POBRANE\MojeProjektyStronInterentowych\Projekt_IOP\Projekt_IOP\bin\Debug\net7.0\System.Data.SqlClient.dll
+D:\POBRANE\MojeProjektyStronInterentowych\Projekt_IOP\Projekt_IOP\bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll
+D:\POBRANE\MojeProjektyStronInterentowych\Projekt_IOP\Projekt_IOP\bin\Debug\net7.0\runtimes\win-x64\native\sni.dll
+D:\POBRANE\MojeProjektyStronInterentowych\Projekt_IOP\Projekt_IOP\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
+D:\POBRANE\MojeProjektyStronInterentowych\Projekt_IOP\Projekt_IOP\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\POBRANE\MojeProjektyStronInterentowych\Projekt_IOP\Projekt_IOP\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\POBRANE\MojeProjektyStronInterentowych\Projekt_IOP\Projekt_IOP\obj\Debug\net7.0\Projekt_IOP.csproj.CopyComplete
