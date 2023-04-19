@@ -1,0 +1,76 @@
+﻿@page
+@model Projekt_IOP.Pages.CreateModel
+@{
+}
+
+<br />
+<h2>Nowy kontakt</h2>
+
+<!-- Alert validation data -->
+@if(Model.errorMassege.Length > 0)
+{
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+		<strong>@Model.errorMassege</strong>
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+}
+
+<!-- Add new contact form -->
+<form method="POST">
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Imie</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="fist_name" value="@Model.clientInfo.first_name"/>
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Nazwisko</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="last_name" value="@Model.clientInfo.last_name" />
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Email</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="email" value="@Model.clientInfo.email" />
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Płeć</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="gender" value="@Model.clientInfo.gender" />
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Kraj</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="country" value="@Model.clientInfo.country" />
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label class="col-sm-3 col-form-label">Miasto</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="city" value="@Model.clientInfo.city" />
+		</div>
+	</div>
+
+	<!-- Success validation data -->
+	@if (Model.successMessage.Length > 0)
+	{
+		<div class="alert alert-success alert-dismissible fade show" role="alert">
+			<strong>@Model.successMessage</strong>
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+	}
+
+
+	<div class="row mb-3">
+		<div class="offset-sm-3 col-sm-3 d-grid">
+			<button type="submit" class="btn btn-primary">Dodaj</button>
+		</div>
+		<div class="col-sm-3 d-grid">
+			<a class="btn btn-outline-primary" href="\" role="button">Cancel</a>
+		</div>
+	</div>
+
+</form>

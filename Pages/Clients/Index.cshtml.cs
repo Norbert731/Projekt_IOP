@@ -6,9 +6,9 @@ namespace Projekt_IOP.Pages.Clients
 {
     public class IndexModel : PageModel
     {
-        public List<ClientInfo> listsClients = new List<ClientInfo>();
+        //public List<ClientInfo> listsClients = new List<ClientInfo>();
         public void OnGet()
-        {
+		{   /*
             try
             {
                 String ConnectionString = "Data Source=.\\sqlexpress;Initial Catalog=Contacts_DB;Integrated Security=True";
@@ -42,11 +42,11 @@ namespace Projekt_IOP.Pages.Clients
             catch (Exception ex)
             {
                 Console.WriteLine("Exception:" + ex.ToString());
-            }
-        }
+            }*/
+		}
 
     }
-
+        /*
     public class ClientInfo
     {
         public String id;
@@ -57,5 +57,5 @@ namespace Projekt_IOP.Pages.Clients
         public String country;
         public String city;
 
-    }
+    }*/
 }
