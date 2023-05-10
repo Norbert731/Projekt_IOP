@@ -18,3 +18,6 @@ Funkcjonalności:
 Na wszelki wypadek napiszę tutaj wersje jakich używam żebyśmy mieli te same
 - Visual studio Code 2022, wersja 17.5.2
 - SDK 7.0.202 (można sprawdzić wpisując w termial "dotnet --list-sdks")
+- SSMS developer server 2022
+- SMSS studio 19.0.2
+- SMSS export/import database (https://www.youtube.com/watch?v=XLzV_gagkZc)
