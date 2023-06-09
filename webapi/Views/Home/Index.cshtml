@@ -1,0 +1,37 @@
+﻿@model webapi.Models.User
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    
+    <h1>Zaloguj się</h1>
+    @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        <div class="error-message">@ViewBag.ErrorMessage</div>
+    }
+
+    <form method="POST" action="/Home/Login">
+        <input type="text" id="login" name="login"><br>
+        <input type="password" id="password" name="password"><br>
+        <input type="submit" value="Zaloguj">
+    </form>
+    
+    
+    <h1>Zarejestruj się</h1>
+    <form method="POST" action="/Home/Register">
+        <input type="text" id="firstName" name="firstName" placeholder="First Name"><br>
+        <input type="text" id="lastName" name="lastName" placeholder="Last Name"><br>
+        <input type="email" id="email" name="email" placeholder="Email"><br>
+        <input type="text" id="gender" name="gender" placeholder="Gender"><br>
+        <input type="text" id="city" name="city" placeholder="City"><br>
+        <input type="text" id="login" name="login" placeholder="Login"><br>
+        <input type="password" id="password" name="password" placeholder="Password"><br>
+        <input type="submit" value="Zarejestruj">
+    </form>
+</body>
+</html>

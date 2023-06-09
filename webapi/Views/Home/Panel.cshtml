@@ -1,0 +1,21 @@
+@model webapi.Models.User
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Panel</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <h1>Welcome, @Model.FirstName!</h1>
+    <p>Email: @Model.Email</p>
+    <p>Gender: @Model.Gender</p>
+    <p>City: @Model.City</p>
+    <!-- Display other user properties as needed -->
+
+    <form method="POST" action="/Home/Logout">
+        <input type="submit" value="Log Out">
+    </form>
+</body>
+</html>
