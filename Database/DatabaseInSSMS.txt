@@ -1,0 +1,16 @@
+DROP TABLE dbo.users;
+GO
+CREATE TABLE dbo.users (
+    Userid INT PRIMARY KEY,
+    login VARCHAR(50),
+    password VARCHAR(50),
+    active BIT
+);
+GO
+INSERT INTO dbo.users (Userid, login, password, active)
+VALUES
+    (1, 'Bob', 'tajnehaslo', 1),
+    (2, 'Alice', 'password123', 1),
+    (3, 'John', 'securepass', 0),
+    (4, 'Emma', 'abc123', 1),
+    (5, 'Mike', 'qwerty', 1);
