@@ -1,48 +1,74 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
-namespace webapi.Models;
-
-public partial class ContactsDbContext : DbContext
+namespace webapi.Models
 {
-    public ContactsDbContext()
+    public partial class ContactsDbContext : DbContext
     {
-    }
-
-    public ContactsDbContext(DbContextOptions<ContactsDbContext> options)
-        : base(options)
-    {
-    }
-
-    public virtual DbSet<User> Users { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=NORBERT-KOMP\\SQLEXPRESS; Database=ContactsDB;Trusted_Connection=True; TrustServerCertificate=True;");
-
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        modelBuilder.Entity<User>(entity =>
+        public ContactsDbContext(DbContextOptions<ContactsDbContext> options)
+            : base(options)
         {
-            entity.HasKey(e => e.Userid).HasName("PK__users__1797D02432D9A170");
+        }
 
-            entity.ToTable("users");
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<ContactsList> ContactsList { get; set; }
 
-            entity.Property(e => e.Userid).ValueGeneratedNever();
-            entity.Property(e => e.Active).HasColumnName("active");
-            entity.Property(e => e.Login)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("login");
-            entity.Property(e => e.Password)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("password");
-        });
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.HasKey(e => e.Userid).HasName("PK__users__1797D02432D9A170");
 
-        OnModelCreatingPartial(modelBuilder);
+                entity.ToTable("users");
+
+                entity.Property(e => e.Userid).ValueGeneratedNever();
+                entity.Property(e => e.Active).HasColumnName("active");
+                entity.Property(e => e.Login)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("login");
+                entity.Property(e => e.Password)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("password");
+            });
+
+            modelBuilder.Entity<ContactsList>(entity =>
+            {
+                entity.HasKey(e => e.ContactID).HasName("PK__ContactsList__ContactID");
+
+                entity.ToTable("ContactsList");
+
+                entity.Property(e => e.ContactID).ValueGeneratedOnAdd();
+                entity.Property(e => e.FirstName)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("FirstName");
+                entity.Property(e => e.LastName)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("LastName");
+                entity.Property(e => e.Email)
+                    .HasMaxLength(100)
+                    .IsUnicode(false)
+                    .HasColumnName("Email");
+                entity.Property(e => e.Gender)
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnName("Gender");
+                entity.Property(e => e.City)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("City");
+
+                entity.HasOne(d => d.User)
+                    .WithMany()
+                    .HasForeignKey(d => d.UserID)
+                    .HasConstraintName("FK_ContactsList_Users_UserID");
+            });
+
+            OnModelCreatingPartial(modelBuilder);
+        }
+
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
-
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

@@ -14,3 +14,15 @@ VALUES
     (3, 'John', 'securepass', 0),
     (4, 'Emma', 'abc123', 1),
     (5, 'Mike', 'qwerty', 1);
+GO
+CREATE TABLE dbo.ContactsList (
+    ContactID INT PRIMARY KEY,
+    UserID INT FOREIGN KEY REFERENCES dbo.users(Userid),
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Email VARCHAR(100),
+    Gender VARCHAR(10),
+    City VARCHAR(50)
+);
+GO
+INSERT INTO ContactsList (ContactID, UserID, FirstName, LastName, Email,Gender,City) VALUES (1, 1, Joe, Doe, JoeDoe@mail.com,male,Warsaw);

@@ -23,31 +23,86 @@ namespace webapi.Migrations
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("webapi.Models.User", b =>
-                {
-                    b.Property<int>("Userid")
-                        .HasColumnType("int");
+            {
+                b.Property<int>("Userid")
+                    .HasColumnType("int");
 
-                    b.Property<bool?>("Active")
-                        .HasColumnType("bit")
-                        .HasColumnName("active");
+                b.Property<bool?>("Active")
+                    .HasColumnType("bit")
+                    .HasColumnName("active");
 
-                    b.Property<string>("Login")
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)")
-                        .HasColumnName("login");
+                b.Property<string>("Login")
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnType("varchar(50)")
+                    .HasColumnName("login");
 
-                    b.Property<string>("Password")
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)")
-                        .HasColumnName("password");
+                b.Property<string>("Password")
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnType("varchar(50)")
+                    .HasColumnName("password");
 
-                    b.HasKey("Userid")
-                        .HasName("PK__users__1797D02432D9A170");
+                b.HasKey("Userid")
+                    .HasName("PK__users__1797D02432D9A170");
 
-                    b.ToTable("users", (string)null);
-                });
+                b.ToTable("users", (string)null);
+            });
+
+            modelBuilder.Entity("webapi.Models.ContactsList", b =>
+            {
+                b.Property<int>("ContactID")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
+
+                b.Property<string>("City")
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnType("varchar(50)")
+                    .HasColumnName("City");
+
+                b.Property<string>("Email")
+                    .HasMaxLength(100)
+                    .IsUnicode(false)
+                    .HasColumnType("varchar(100)")
+                    .HasColumnName("Email");
+
+                b.Property<string>("FirstName")
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnType("varchar(50)")
+                    .HasColumnName("FirstName");
+
+                b.Property<string>("Gender")
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasColumnType("varchar(10)")
+                    .HasColumnName("Gender");
+
+                b.Property<string>("LastName")
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnType("varchar(50)")
+                    .HasColumnName("LastName");
+
+                b.Property<int?>("UserID")
+                    .HasColumnType("int");
+
+                b.HasKey("ContactID")
+                    .HasName("PK__ContactsList__ContactID");
+
+                b.HasIndex("UserID");
+
+                b.ToTable("ContactsList", (string)null);
+            });
+
+            modelBuilder.Entity("webapi.Models.ContactsList", b =>
+            {
+                b.HasOne("webapi.Models.User", null)
+                    .WithMany("ContactsList")
+                    .HasForeignKey("UserID")
+                    .HasConstraintName("FK_ContactsList_Users_UserID");
+            });
 #pragma warning restore 612, 618
         }
     }

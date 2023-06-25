@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\POBRANE\\MojeProjektyStronInterentowych\\ProjektyIOP\\DotnetProject\\Projekt_IOP-master\\Projekt_IOP-master\\webapi\\webapi.csproj": {}
+    "C:\\Users\\orzel\\Personal\\ProjektyStronInternetowych\\ProjektyIOP\\DotnetProject\\Projekt_IOP\\webapi\\webapi.csproj": {}
   },
   "projects": {
-    "D:\\POBRANE\\MojeProjektyStronInterentowych\\ProjektyIOP\\DotnetProject\\Projekt_IOP-master\\Projekt_IOP-master\\webapi\\webapi.csproj": {
+    "C:\\Users\\orzel\\Personal\\ProjektyStronInternetowych\\ProjektyIOP\\DotnetProject\\Projekt_IOP\\webapi\\webapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\POBRANE\\MojeProjektyStronInterentowych\\ProjektyIOP\\DotnetProject\\Projekt_IOP-master\\Projekt_IOP-master\\webapi\\webapi.csproj",
+        "projectUniqueName": "C:\\Users\\orzel\\Personal\\ProjektyStronInternetowych\\ProjektyIOP\\DotnetProject\\Projekt_IOP\\webapi\\webapi.csproj",
         "projectName": "webapi",
-        "projectPath": "D:\\POBRANE\\MojeProjektyStronInterentowych\\ProjektyIOP\\DotnetProject\\Projekt_IOP-master\\Projekt_IOP-master\\webapi\\webapi.csproj",
-        "packagesPath": "C:\\Users\\NORBERT\\.nuget\\packages\\",
-        "outputPath": "D:\\POBRANE\\MojeProjektyStronInterentowych\\ProjektyIOP\\DotnetProject\\Projekt_IOP-master\\Projekt_IOP-master\\webapi\\obj\\",
+        "projectPath": "C:\\Users\\orzel\\Personal\\ProjektyStronInternetowych\\ProjektyIOP\\DotnetProject\\Projekt_IOP\\webapi\\webapi.csproj",
+        "packagesPath": "C:\\Users\\orzel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\orzel\\Personal\\ProjektyStronInternetowych\\ProjektyIOP\\DotnetProject\\Projekt_IOP\\webapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\NORBERT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\orzel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -56,7 +56,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.7, )"
+              "version": "[7.0.8, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

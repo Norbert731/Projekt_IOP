@@ -1,25 +1,22 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Data;
-using System.Data.SqlClient;
-using System.Security.AccessControl;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using webapi.Models;
 
 namespace webapi.Controllers
 {
-
     [ApiController]
     [Route("api/[controller]")]
     public class ContactsController : ControllerBase
     {
+        private readonly ContactsDbContext _dbContext;
 
-
-
-        private readonly ContactsDbContext _dbcontext;
-
-        public ContactsController(ContactsDbContext _context)
+        public ContactsController(ContactsDbContext dbContext)
         {
-            _dbcontext = _context;
+            _dbContext = dbContext;
         }
 
         [Authorize]
@@ -29,14 +26,14 @@ namespace webapi.Controllers
         {
             try
             {
-                List<User> ListUsers = _dbcontext.Users.ToList();
-                if (ListUsers != null)
+                List<User> userList = await _dbContext.Users.ToListAsync();
+                if (userList != null)
                 {
-                    return Ok(ListUsers);
+                    return Ok(userList);
                 }
                 else
                 {
-                    return Ok("database without contacts");
+                    return Ok("Database without contacts");
                 }
             }
             catch (Exception ex)
@@ -44,7 +41,5 @@ namespace webapi.Controllers
                 return BadRequest(ex.Message);
             }
         }
-       
-
     }
 }
