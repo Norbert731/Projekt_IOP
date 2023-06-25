@@ -8,7 +8,7 @@ export default function Contacts() {
     const fetchUsers = async () => {
       try {
         const response = await axios.get(
-          "https://localhost:7265/api/Contacts/Users"
+          "https://localhost:7265/api/ContactsList"
         );
         setUsers(response.data);
         console.log(response.data);
@@ -34,12 +34,11 @@ export default function Contacts() {
       <tbody>
         {users.map((user) => (
           <tr key={user.userid}>
-            <td>{user.login}</td>
-            {/* <td>{user.firstName}</td>
+            <td>{user.firstName}</td>
             <td>{user.lastName}</td>
             <td>{user.email}</td>
             <td>{user.gender}</td>
-            <td>{user.city}</td> */}
+            <td>{user.city}</td>
           </tr>
         ))}
       </tbody>
