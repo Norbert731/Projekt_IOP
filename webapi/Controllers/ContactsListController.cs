@@ -67,18 +67,30 @@ namespace webapi.Controllers
 
         // PUT: api/ContactsList/5
         [HttpPut("{id}")]
-        public IActionResult PutContactsList(int id, ContactsList contactsList)
+        public IActionResult PutContactsList(int id, [FromBody] ContactsListDto contactsListDto)
         {
-            if (id != contactsList.ContactID)
+            if (id != contactsListDto.ContactID)
             {
                 return BadRequest();
             }
+
+            var contactsList = new ContactsList
+            {
+                ContactID = contactsListDto.ContactID,
+                UserID = contactsListDto.UserID,
+                FirstName = contactsListDto.FirstName,
+                LastName = contactsListDto.LastName,
+                Email = contactsListDto.Email,
+                Gender = contactsListDto.Gender,
+                City = contactsListDto.City
+            };
 
             _context.Entry(contactsList).State = EntityState.Modified;
             _context.SaveChanges();
 
             return NoContent();
         }
+
 
         // DELETE: api/ContactsList/5
         [HttpDelete("{id}")]
