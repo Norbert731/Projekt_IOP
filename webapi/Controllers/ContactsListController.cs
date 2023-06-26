@@ -43,13 +43,27 @@ namespace webapi.Controllers
 
         // POST: api/ContactsList
         [HttpPost]
-        public ActionResult<ContactsList> PostContactsList(ContactsList contactsList)
+        public ActionResult<ContactsList> PostContactsList([FromBody] ContactsListDto contactsListDto)
         {
+            var contactsList = new ContactsList
+            {
+                ContactID = contactsListDto.ContactID,
+                UserID = contactsListDto.UserID,
+                FirstName = contactsListDto.FirstName,
+                LastName = contactsListDto.LastName,
+                Email = contactsListDto.Email,
+                Gender = contactsListDto.Gender,
+                City = contactsListDto.City
+            };
+
             _context.ContactsList.Add(contactsList);
             _context.SaveChanges();
 
             return CreatedAtAction("GetContactsList", new { id = contactsList.ContactID }, contactsList);
         }
+
+
+
 
         // PUT: api/ContactsList/5
         [HttpPut("{id}")]

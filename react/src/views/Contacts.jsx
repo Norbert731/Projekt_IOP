@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import AddContact from "../components/AddContact";
 
 export default function Contacts() {
   const [users, setUsers] = useState([]);
@@ -21,27 +22,30 @@ export default function Contacts() {
   }, []);
 
   return (
-    <table className="contacts">
-      <thead>
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Email</th>
-          <th>Gender</th>
-          <th>City</th>
-        </tr>
-      </thead>
-      <tbody>
-        {users.map((user) => (
-          <tr key={user.userid}>
-            <td>{user.firstName}</td>
-            <td>{user.lastName}</td>
-            <td>{user.email}</td>
-            <td>{user.gender}</td>
-            <td>{user.city}</td>
+    <div>
+      <AddContact />
+      <table className="contacts">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>City</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {users.map((user) => (
+            <tr key={user.userid}>
+              <td>{user.firstName}</td>
+              <td>{user.lastName}</td>
+              <td>{user.email}</td>
+              <td>{user.gender}</td>
+              <td>{user.city}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
