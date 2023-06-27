@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import AddContact from "../components/AddContact";
 import Layout from "../components/Layout";
-import DeleteContactButton from "../components/DeleteContactButton";
 
 export default function Contacts() {
   const [users, setUsers] = useState([]);
@@ -31,6 +30,17 @@ export default function Contacts() {
 
   const handleChange = (event) => {
     setSearchInput(event.target.value);
+  };
+
+  const handleDelete = (contactID) => {
+    try {
+      axios.delete(`https://localhost:7265/api/ContactsList/${contactID}`);
+      setUsers((prevUsers) =>
+        prevUsers.filter((user) => user.contactID !== contactID)
+      );
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const filteredUsers = users.filter((user) =>
@@ -66,7 +76,7 @@ export default function Contacts() {
         </thead>
         <tbody>
           {filteredUsers.map((user) => (
-            <tr key={user.userid}>
+            <tr key={user.contactID}>
               <td>{user.firstName}</td>
               <td>{user.lastName}</td>
               <td>{user.email}</td>
@@ -74,7 +84,9 @@ export default function Contacts() {
               <td>{user.city}</td>
               <td>
                 <button>Edit</button>
-                <DeleteContactButton userid={user.userid} />
+                <button onClick={() => handleDelete(user.contactID)}>
+                  Delete
+                </button>
               </td>
             </tr>
           ))}
