@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import AddContact from "../components/AddContact";
+import Layout from "../components/Layout";
 
 export default function Contacts() {
   const [users, setUsers] = useState([]);
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -21,9 +23,16 @@ export default function Contacts() {
     fetchUsers();
   }, []);
 
+  const togglePopup = () => {
+    setShowPopup((prevState) => !prevState);
+  };
+
   return (
-    <div>
-      <AddContact />
+    <Layout>
+      <button onClick={togglePopup} className="btn">
+        Add Contact
+      </button>
+      {showPopup && <AddContact togglePopup={togglePopup} />}
       <table className="contacts">
         <thead>
           <tr>
@@ -32,6 +41,7 @@ export default function Contacts() {
             <th>Email</th>
             <th>Gender</th>
             <th>City</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -42,10 +52,14 @@ export default function Contacts() {
               <td>{user.email}</td>
               <td>{user.gender}</td>
               <td>{user.city}</td>
+              <td>
+                <button>Edit</button>
+                <button>Delete</button>
+              </td>
             </tr>
           ))}
         </tbody>
       </table>
-    </div>
+    </Layout>
   );
 }

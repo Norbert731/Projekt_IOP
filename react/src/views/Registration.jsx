@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Layout from "../components/Layout";
 
 const Registration = () => {
   const [username, setUsername] = useState("");
@@ -33,39 +34,41 @@ const Registration = () => {
   };
 
   return (
-    <div className="login">
-      <h2 className="title">Register</h2>
-      <form onSubmit={handleSubmit} className="login-form">
-        <div>
-          <label>Username:</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Confirm Password:</label>
-          <input
-            type="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-          />
-        </div>
-        {message && <p className="message message--error">{message}</p>}
-        <button type="submit" className="btn">
-          Register
-        </button>
-      </form>
-    </div>
+    <Layout>
+      <div className="login">
+        <h2 className="title">Register</h2>
+        <form onSubmit={handleSubmit} className="login-form">
+          <div>
+            <label>Username:</label>
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+          <div>
+            <label>Password:</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <div>
+            <label>Confirm Password:</label>
+            <input
+              type="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+          </div>
+          {message && <p className="message message--error">{message}</p>}
+          <button type="submit" className="btn">
+            Register
+          </button>
+        </form>
+      </div>
+    </Layout>
   );
 };
 

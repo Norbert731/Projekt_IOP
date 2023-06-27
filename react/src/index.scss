@@ -101,6 +101,17 @@ td {
     background-color: #fff;
     padding: 20px;
     width: 100%;
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+        gap: 20px;
+
+        a {
+            color: #2F2F2F;
+            text-decoration: none;
+        }
+    }
 }
 
 tr {
@@ -140,4 +151,40 @@ tr {
     margin-top: 30px;
     margin-bottom: 30px;
     max-width: 330px;
+}
+
+.overlay {
+    background-color: #00000086;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 750px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__close {
+        margin-left: auto;
+    }
+
+    &__form {
+        max-width: 300px;
+        width: 100%;
+    }
 }

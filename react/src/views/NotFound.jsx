@@ -1,3 +1,9 @@
+import Layout from "../components/Layout";
+
 export default function NotFound() {
-  return <div>Page Not Found</div>;
+  return (
+    <Layout>
+      <div>Page Not Found</div>
+    </Layout>
+  );
 }

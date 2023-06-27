@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import Layout from "../components/Layout";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
+  const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = async (e) => {
@@ -12,7 +13,7 @@ const Login = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ login, password }),
     });
 
     // Handle the response from the server
@@ -24,30 +25,32 @@ const Login = () => {
   };
 
   return (
-    <div className="login">
-      <h2 className="title">Login</h2>
-      <form onSubmit={handleSubmit} className="login-form">
-        <div>
-          <label>Username:</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button type="submit" className="btn">
-          Login
-        </button>
-      </form>
-    </div>
+    <Layout>
+      <div className="login">
+        <h2 className="title">Login</h2>
+        <form onSubmit={handleSubmit} className="login-form">
+          <div>
+            <label>Login:</label>
+            <input
+              type="text"
+              value={login}
+              onChange={(e) => setLogin(e.target.value)}
+            />
+          </div>
+          <div>
+            <label>Password:</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <button type="submit" className="btn">
+            Login
+          </button>
+        </form>
+      </div>
+    </Layout>
   );
 };
 
