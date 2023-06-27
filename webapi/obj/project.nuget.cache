@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+9XZIF/SWDTQgN8Zk4NPT+uPA5DLKelufZ1As2jRfMr6B9N4mvBW8uAOiI57gNLmfRvj6XJhLlntf5ZGj0hFIg==",
+  "dgSpecHash": "WV+Nep/83+kA7wdFJWeUbYUepaGRX9cJc28uW/DLraI2zt7QqK9HjJwJAZMLN3i0DGIQfzJ8PLJICWxzc9hbIQ==",
   "success": true,
   "projectFilePath": "C:\\STUDIA\\IoP\\projekt_nowy\\Projekt_IOP\\webapi\\webapi.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,7 @@
     "C:\\Users\\karau\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\karau\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\karau\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "C:\\Users\\karau\\.nuget\\packages\\microsoft.aspnet.cors\\5.2.9\\microsoft.aspnet.cors.5.2.9.nupkg.sha512",
     "C:\\Users\\karau\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.7\\microsoft.aspnetcore.authentication.jwtbearer.7.0.7.nupkg.sha512",
     "C:\\Users\\karau\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "C:\\Users\\karau\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.11\\microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512",
@@ -236,5 +237,16 @@
     "C:\\Users\\karau\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\karau\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Pakiet „Microsoft.AspNet.Cors 5.2.9” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1” zamiast platformy docelowej projektu „net7.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
+      "libraryId": "Microsoft.AspNet.Cors",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using webapi.Models;
+using Microsoft.AspNetCore.Cors;
+
+var policyName = "_myAllowSpecificOrigins";
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,17 +36,19 @@ builder.Services.AddAuthentication(options =>
  });
 
 
-//CORS
-var myCors = "appCors";
+
 builder.Services.AddCors(options =>
 {
-	options.AddPolicy(myCors, policy =>
-	{
-		policy.WithOrigins("https://localhost:5173").AllowAnyHeader().AllowAnyMethod().AllowCredentials();
-	});
+    options.AddPolicy(name: policyName,
+                      builder =>
+                      {
+                          builder
+                            .WithOrigins("http://localhost:5173") // specifying the allowed origin
+                            .AllowAnyMethod() // defining the allowed HTTP method
+                            .AllowAnyHeader()
+                            .AllowCredentials(); // allowing any header to be sent
+                      });
 });
-
-
 
 // Add services to the container.
 
@@ -65,12 +70,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors();
-
 app.UseHttpsRedirection();
 
 //adding authentication
 app.UseAuthentication();
+
+app.UseCors(policyName);
 
 app.UseAuthorization();
 

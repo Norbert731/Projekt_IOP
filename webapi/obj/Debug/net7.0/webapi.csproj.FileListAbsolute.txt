@@ -1017,3 +1017,4 @@ C:\Users\orzel\Personal\ProjektyStronInternetowych\ProjektyIOP\DotnetProject\Pro
 C:\Users\orzel\Personal\ProjektyStronInternetowych\ProjektyIOP\DotnetProject\Projekt_IOP\webapi\obj\Debug\net7.0\webapi.genruntimeconfig.cache
 C:\Users\orzel\Personal\ProjektyStronInternetowych\ProjektyIOP\DotnetProject\Projekt_IOP\webapi\obj\Debug\net7.0\ref\webapi.dll
 C:\STUDIA\IoP\projekt_nowy\Projekt_IOP\webapi\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\STUDIA\IoP\projekt_nowy\Projekt_IOP\webapi\bin\Debug\net7.0\System.Web.Cors.dll
