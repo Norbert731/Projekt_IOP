@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import AddContact from "../components/AddContact";
 import Layout from "../components/Layout";
+import DeleteContactButton from "../components/DeleteContactButton";
 
 export default function Contacts() {
   const [users, setUsers] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
+  const [searchInput, setSearchInput] = useState("");
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -27,12 +29,30 @@ export default function Contacts() {
     setShowPopup((prevState) => !prevState);
   };
 
+  const handleChange = (event) => {
+    setSearchInput(event.target.value);
+  };
+
+  const filteredUsers = users.filter((user) =>
+    Object.values(user).some((value) =>
+      value.toString().toLowerCase().includes(searchInput.toLowerCase())
+    )
+  );
+
   return (
     <Layout>
       <button onClick={togglePopup} className="btn">
         Add Contact
       </button>
       {showPopup && <AddContact togglePopup={togglePopup} />}
+
+      <input
+        type="text"
+        className="search"
+        placeholder="Search"
+        onChange={handleChange}
+      />
+
       <table className="contacts">
         <thead>
           <tr>
@@ -45,7 +65,7 @@ export default function Contacts() {
           </tr>
         </thead>
         <tbody>
-          {users.map((user) => (
+          {filteredUsers.map((user) => (
             <tr key={user.userid}>
               <td>{user.firstName}</td>
               <td>{user.lastName}</td>
@@ -54,7 +74,7 @@ export default function Contacts() {
               <td>{user.city}</td>
               <td>
                 <button>Edit</button>
-                <button>Delete</button>
+                <DeleteContactButton userid={user.userid} />
               </td>
             </tr>
           ))}
